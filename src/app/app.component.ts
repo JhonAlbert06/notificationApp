@@ -11,8 +11,6 @@ import {
 export class AppComponent {
   constructor() {}
 
-  async ngOnInit() {}
-
   async notification() {
     let options: ScheduleOptions = {
       notifications: [
