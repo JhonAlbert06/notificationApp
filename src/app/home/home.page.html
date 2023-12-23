@@ -13,4 +13,27 @@
       <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="ion-padding">
+    <ion-button (click)="notification()">Notification</ion-button>
+
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let item of users">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ item.name }} ({{item.username}})</ion-card-title>
+          <ion-card-subtitle>{{ item.email }}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <label style="display: block;"> {{item.phone}}</label>
+          <label style="display: block;"> {{item.website}}</label>
+          <label style="display: block;"> {{item.company.name}}</label>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-item>
+  </ion-list>
 </ion-content>
